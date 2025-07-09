@@ -192,7 +192,8 @@
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
-                Console.WriteLine("1. 수련자 갑옷   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t 1000 G");
+                string shield1 = "1. 수련자 갑옷   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t 1000 G";
+                Console.WriteLine(shield1);
                 Console.WriteLine("2. 무쇠 갑옷     \t 방어력 +9 \t 무쇠로 만들어져 튼튼한 갑옷입니다.              \t 2000 G");
                 Console.WriteLine("3. 스파르타의 갑옷 \t 방어력 +15 \t 스파르타의 전사들이 사용했다는 전설의 갑옷입니다. \t 3500 G");
                 Console.WriteLine();
@@ -215,6 +216,7 @@
                     if(PlayerMoney >= 1000)
                     {
                         Console.Clear();
+                        shield1 = shield1.Replace("1000 G", "구매 완료");
                         I_tem(1);
                     }
                     else
@@ -235,7 +237,7 @@
             }
         }
 
-       public static void I_tem(int item)
+       public static void I_tem(int item) 
         {
             if(item == 1)
             {
