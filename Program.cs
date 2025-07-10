@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace ConsoleApp2
+﻿namespace ConsoleApp2
 {
     internal class Program
     {
@@ -17,11 +15,13 @@ namespace ConsoleApp2
 
         public static List<string> it = new List<string>();
 
-        public static List<string> itEsystem = new List<string>();
+        public bool IsEquipped { get; set; } = false;
+
+        public static string Result => IsEquipped  ? "[E]" : "[ ]";
+
+        public static List<string> inventory = new List<string>();
 
         public static int buypoint = 0;
-
-        public static string bag = "";
 
         static void Main(string[] args)
         {
@@ -59,14 +59,6 @@ namespace ConsoleApp2
             it.Add("1500 G");
             it.Add("3000 G");
             it.Add("구매 완료");
-
-            itEsystem.Add(" = ");
-            itEsystem.Add("[E]");
-            itEsystem.Add("[E]");
-            itEsystem.Add("[E]");
-            itEsystem.Add("[E]");
-            itEsystem.Add("[E]");
-            itEsystem.Add("[E]");
 
             Menu();
 
@@ -150,7 +142,7 @@ namespace ConsoleApp2
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine();
-                Console.WriteLine(bag);
+                DisplayAllInventoryItems();
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
                 Console.WriteLine("0. 나가기");
@@ -176,34 +168,65 @@ namespace ConsoleApp2
 
             }
         }
-        
+
+        public static void DisplayAllInventoryItems()
+        {
+            if (inventory.Count == 0) 
+            {
+                Console.WriteLine("비어있습니다.");
+            }
+            else
+            {
+                for (int i = 0; i < inventory.Count; i++)
+                {
+                    Console.Write($"{inventory[i]}"); 
+                }
+            }
+        }
+
+        public static void BuyItem(int buypoint)
+        {
+            string bag = "";
+            
+
+            if (buypoint == 1)
+            {
+              bag += $"{Program.Result} {itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
+            }
+            else if(buypoint == 2)
+            {
+              bag += $"{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
+            }
+            else if(buypoint == 3)
+            {
+              bag += $"{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
+            }
+            else if(buypoint == 4)
+            {
+              bag += $"{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
+            }
+            else if(buypoint == 5)
+            {
+              bag += $"{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
+            }
+            else if(buypoint == 6)
+            {
+              bag += $"{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
+            }
+            else
+            {
+                Console.WriteLine("비어있습니다.");
+            }
+            if (!string.IsNullOrEmpty(bag))
+            {
+                inventory.Add(bag);
+            }
+        }
+
 
         public static void Equipment()
         {
-            switch (buypoint)
-            {
-                case 1:
-                    bag += $"{itEsystem[1]}{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
-                    break;
-                case 2:
-                    bag += $"{itEsystem[2]}{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
-                    break;
-                case 3:
-                    bag += $"{itEsystem[3]}{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
-                    break;
-                case 4:
-                    bag += $"{itEsystem[4]}{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
-                    break;
-                case 5:
-                    bag += $"{itEsystem[5]}{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
-                    break;
-                case 6:
-                    bag += $"{itEsystem[6]}{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
-                    break;
-                default:
-                    
-                    break;
-            }
+
 
             while (true)
             {
@@ -213,7 +236,7 @@ namespace ConsoleApp2
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine("번호로 아이템 구매");
                 Console.WriteLine();
-                Console.WriteLine(bag);
+                DisplayAllInventoryItems();
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
@@ -222,18 +245,17 @@ namespace ConsoleApp2
                 if (input3 == "0")
                 {
                     Console.Clear();
-                    Program.buypoint = 0;
                     return;
                 }
                 if(input3 == "1")
                 {
                     Console.Clear();
-                    bag = bag.Replace($"{itEsystem[1]}", $"{itEsystem[0]}");
+                   
                 }
                 if(input3 == "2")
                 {
                     Console.Clear();
-                    bag = bag.Replace($"{itEsystem[2]}", $"{itEsystem[0]}");
+                    
                 }
                 else
                 {
@@ -320,6 +342,7 @@ namespace ConsoleApp2
                     if (PlayerMoney >= 1000 && it[0] != it[7])
                     {
                         Console.Clear();
+                        IsEquipped = true;
                         it[0] = it[7];
                         I_tem(1);
                     }
@@ -462,7 +485,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
-                Program.buypoint = 1;
+                Program.BuyItem(1);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -471,7 +494,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
-                Program.buypoint = 2;
+                Program.BuyItem(2);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -480,7 +503,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
-                Program.buypoint = 3;
+                Program.BuyItem(3);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -489,7 +512,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
-                Program.buypoint = 4;
+                Program.BuyItem(4);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -498,7 +521,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
-                Program.buypoint = 5;
+                Program.BuyItem(5);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -507,7 +530,7 @@ namespace ConsoleApp2
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
-                Program.buypoint = 6;
+                Program.BuyItem(6);
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
