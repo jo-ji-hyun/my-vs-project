@@ -1,4 +1,5 @@
 ﻿using System.Reflection.Metadata.Ecma335;
+using System.Xml.Linq;
 
 namespace ConsoleApp2
 {
@@ -154,7 +155,7 @@ namespace ConsoleApp2
                 Console.WriteLine("[아이템 목록]");
                 //for (int i = 0; i < 6; i++)
                 //{
-                   // Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t {it[i]}");
+                //    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t {it[i]}");
                 //}
                 Console.WriteLine();
                 Console.WriteLine("1. 아이템 구매");
@@ -208,6 +209,16 @@ namespace ConsoleApp2
                 itname.Add("스파르타의 창");
             }
 
+            List<string> itcom = new List<string>();
+            {
+                itcom.Add("수련에 도움을 주는 갑옷입니다.                    ");
+                itcom.Add("무쇠로 만들어져 튼튼한 갑옷입니다.                ");
+                itcom.Add("스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ");
+                itcom.Add("쉽게 볼 수 있는 낡은 검 입니다.                   ");
+                itcom.Add("어디선가 사용됐던거 같은 도끼입니다.              ");
+                itcom.Add("스파르타의 전사들이 사용했다는 전설의 창입니다.   ");
+            }
+
             while (true)
             {
                 Console.WriteLine("상점 - 구매중");
@@ -216,9 +227,10 @@ namespace ConsoleApp2
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine("원하시는 아이템 구매");
+                Console.WriteLine();
                 for (int i = 0; i < 6; i++)
                 {
-                    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t {it[i]}");
+                    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t {itcom[i]}  \t {it[i]}");
                 }
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
@@ -255,7 +267,7 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "2")
                 {
-                    if (PlayerMoney >= 1000 && it[1] != it[6])
+                    if (PlayerMoney >= 2000 && it[1] != it[6])
                     {
                         Console.Clear();
                         it[1] = it[6];
@@ -278,7 +290,7 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "3" && it[2] != it[6])
                 {
-                    if (PlayerMoney >= 1000)
+                    if (PlayerMoney >= 3500)
                     {
                         Console.Clear();
                         it[2] = it[6];
@@ -301,7 +313,7 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "4" && it[3] != it[6])
                 {
-                    if (PlayerMoney >= 1000)
+                    if (PlayerMoney >= 600)
                     {
                         Console.Clear();
                         it[3] = it[6];
@@ -324,7 +336,7 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "5" && it[4] != it[6])
                 {
-                    if (PlayerMoney >= 1000)
+                    if (PlayerMoney >= 1500)
                     {
                         Console.Clear();
                         it[4] = it[6];
@@ -347,7 +359,7 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "6" && it[5] != it[6])
                 {
-                    if (PlayerMoney >= 1000)
+                    if (PlayerMoney >= 3000)
                     {
                         Console.Clear();
                         it[5] = it[6];
