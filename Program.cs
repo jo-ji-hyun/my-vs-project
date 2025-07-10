@@ -17,6 +17,8 @@ namespace ConsoleApp2
 
         public static List<string> it = new List<string>();
 
+        public static List<string> itEsystem = new List<string>();
+
         public static int buypoint = 0;
 
         public static string bag = "";
@@ -57,6 +59,14 @@ namespace ConsoleApp2
             it.Add("1500 G");
             it.Add("3000 G");
             it.Add("구매 완료");
+
+            itEsystem.Add(" = ");
+            itEsystem.Add("[E]");
+            itEsystem.Add("[E]");
+            itEsystem.Add("[E]");
+            itEsystem.Add("[E]");
+            itEsystem.Add("[E]");
+            itEsystem.Add("[E]");
 
             Menu();
 
@@ -173,22 +183,22 @@ namespace ConsoleApp2
             switch (buypoint)
             {
                 case 1:
-                    bag += $"[E]{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
+                    bag += $"{itEsystem[1]}{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
                     break;
                 case 2:
-                    bag += $"[E]{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
+                    bag += $"{itEsystem[2]}{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
                     break;
                 case 3:
-                    bag += $"[E]{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
+                    bag += $"{itEsystem[3]}{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
                     break;
                 case 4:
-                    bag += $"[E]{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
+                    bag += $"{itEsystem[4]}{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
                     break;
                 case 5:
-                    bag += $"[E]{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
+                    bag += $"{itEsystem[5]}{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
                     break;
                 case 6:
-                    bag += $"[E]{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
+                    bag += $"{itEsystem[6]}{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
                     break;
                 default:
                     
@@ -215,6 +225,16 @@ namespace ConsoleApp2
                     Program.buypoint = 0;
                     return;
                 }
+                if(input3 == "1")
+                {
+                    Console.Clear();
+                    bag = bag.Replace($"{itEsystem[1]}", $"{itEsystem[0]}");
+                }
+                if(input3 == "2")
+                {
+                    Console.Clear();
+                    bag = bag.Replace($"{itEsystem[2]}", $"{itEsystem[0]}");
+                }
                 else
                 {
                     Console.Clear();
@@ -235,6 +255,7 @@ namespace ConsoleApp2
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
+                Console.WriteLine();
                 for (int i = 0; i < 7; i++)
                 {
                     Console.WriteLine($"{itname[i]}   \t {itnumber[i]}  \t {itcom[i]}  \t {it[i]}");
