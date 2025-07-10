@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using System.Collections.Concurrent;
+
+namespace ConsoleApp2
 {
     internal class Program
     {
@@ -14,6 +16,10 @@
         public static List<string> itcom = new List<string>();
 
         public static List<string> it = new List<string>();
+
+        public static int buypoint = 0;
+
+        public static string bag = "";
 
         static void Main(string[] args)
         {
@@ -53,6 +59,7 @@
             it.Add("구매 완료");
 
             Menu();
+
         }
         public static void Menu()
         {
@@ -100,7 +107,7 @@
                 Console.WriteLine("Lv. 01");
                 Console.WriteLine("Chad (전사)");
                 Console.WriteLine($"공격력 : 10 (+{PlayerAttack})");
-                Console.WriteLine($"방어력 : 5 (+{PlayerSheield})");
+                Console.WriteLine($"방어력 : 5  (+{PlayerSheield})");
                 Console.WriteLine("체력 : 100");
                 Console.WriteLine($"Gold : {PlayerMoney} G");
                 Console.WriteLine();
@@ -132,6 +139,7 @@
                 Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
+                Console.WriteLine(bag);
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
                 Console.WriteLine("0. 나가기");
@@ -157,9 +165,35 @@
 
             }
         }
+        
 
         public static void Equipment()
         {
+            switch (buypoint)
+            {
+                case 1:
+                    bag += $"{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
+                    break;
+                case 2:
+                    bag += $"{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
+                    break;
+                case 3:
+                    bag += $"{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
+                    break;
+                case 4:
+                    bag += $"{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
+                    break;
+                case 5:
+                    bag += $"{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
+                    break;
+                case 6:
+                    bag += $"{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
+                    break;
+                default:
+
+                    break;
+            }
+
             while (true)
             {
                 Console.WriteLine("인벤토리 - 장비 창");
@@ -167,7 +201,7 @@
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine();
-                Console.WriteLine("- 1 ");
+                Console.WriteLine(bag);
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
@@ -177,6 +211,12 @@
                 {
                     Console.Clear();
                     return;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("잘못된 입력입니다.");
+                    Console.WriteLine();
                 }
 
             }
@@ -258,7 +298,6 @@
                         Console.Clear();
                         it[0] = it[7];
                         I_tem(1);
-                        continue;
                     }
                     else if (it[0] == it[7])
                     {
@@ -281,7 +320,6 @@
                         Console.Clear();
                         it[1] = it[7];
                         I_tem(2);
-                        continue;
                     }
                     else if (it[1] == it[7])
                     {
@@ -304,7 +342,6 @@
                         Console.Clear();
                         it[2] = it[7];
                         I_tem(3);
-                        continue;
                     }
                     else if (it[2] == it[7])
                     {
@@ -327,7 +364,6 @@
                         Console.Clear();
                         it[4] = it[7];
                         I_tem(4);
-                        continue;
                     }
                     else if (it[4] == it[7])
                     {
@@ -350,7 +386,6 @@
                         Console.Clear();
                         it[5] = it[7];
                         I_tem(5);
-                        continue;
                     }
                     else if (it[5] == it[7])
                     {
@@ -373,7 +408,6 @@
                         Console.Clear();
                         it[6] = it[7];
                         I_tem(6);
-                        continue;
                     }
                     else if (it[6] == it[7])
                     {
@@ -404,43 +438,55 @@
             {
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
+                Program.buypoint = 1;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
             if (item == 2)
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
+                Program.buypoint = 2;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
             if (item == 3)
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
+                Program.buypoint = 3;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
             if (item == 4)
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
+                Program.buypoint = 4;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
             if (item == 5)
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
+                Program.buypoint = 5;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
             if (item == 6)
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
+                Program.buypoint = 6;
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
+                Equipment();
             }
 
         }
