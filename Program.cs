@@ -1,7 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Xml.Linq;
-
-namespace ConsoleApp2
+﻿namespace ConsoleApp2
 {
     internal class Program
     {
@@ -10,35 +7,50 @@ namespace ConsoleApp2
 
         public static int PlayerMoney = 150000;
 
-        public static List<string> it = new List<string>();
-
         public static List<string> itname = new List<string>();
+
+        public static List<string> itnumber = new List<string>();
 
         public static List<string> itcom = new List<string>();
 
+        public static List<string> it = new List<string>();
+
         static void Main(string[] args)
         {
-            it.Add("1000 G");
-            it.Add("2000 G");
-            it.Add("3500 G");
-            it.Add("600 G");
-            it.Add("1500 G");
-            it.Add("3000 G");
-            it.Add("구매 완료");
 
-            itname.Add("수련자 갑옷 ");
-            itname.Add("무쇠 갑옷   ");
-            itname.Add("스파르타의 갑옷");
-            itname.Add("낡은 검     ");
-            itname.Add("청동 도끼   ");
-            itname.Add("스파르타의 창");
+            itname.Add("1. 수련자 갑옷    ");
+            itname.Add("2. 무쇠 갑옷      ");
+            itname.Add("3. 스파르타의 갑옷");
+            itname.Add("            ");
+            itname.Add("4. 낡은 검        ");
+            itname.Add("5. 청동 도끼      ");
+            itname.Add("6. 스파르타의 창  ");
+
+            itnumber.Add("방어력 + 5  ");
+            itnumber.Add("방어력 + 9  ");
+            itnumber.Add("방어력 + 15 ");
+            itnumber.Add("            ");
+            itnumber.Add("공격력 + 2  ");
+            itnumber.Add("공격력 + 5  ");
+            itnumber.Add("공격력 + 7  ");
+            
 
             itcom.Add("수련에 도움을 주는 갑옷입니다.                    ");
             itcom.Add("무쇠로 만들어져 튼튼한 갑옷입니다.                ");
             itcom.Add("스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ");
+            itcom.Add("                                                  ");
             itcom.Add("쉽게 볼 수 있는 낡은 검 입니다.                   ");
             itcom.Add("어디선가 사용됐던거 같은 도끼입니다.              ");
             itcom.Add("스파르타의 전사들이 사용했다는 전설의 창입니다.   ");
+
+            it.Add("1000 G");
+            it.Add("2000 G");
+            it.Add("3500 G");
+            it.Add("      ");
+            it.Add("600 G ");
+            it.Add("1500 G");
+            it.Add("3000 G");
+            it.Add("구매 완료");
 
             Menu();
         }
@@ -180,9 +192,9 @@ namespace ConsoleApp2
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 7; i++)
                 {
-                    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t {itcom[i]}  \t {it[i]}");
+                    Console.WriteLine($"{itname[i]}   \t {itnumber[i]}  \t {itcom[i]}  \t {it[i]}");
                 }
                 Console.WriteLine();
                 Console.WriteLine("1. 아이템 구매");
@@ -225,9 +237,9 @@ namespace ConsoleApp2
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine("원하시는 아이템 구매");
                 Console.WriteLine();
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 7; i++)
                 {
-                    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t {itcom[i]}  \t {it[i]}");
+                    Console.WriteLine($"{itname[i]}   \t {itnumber[i]}  \t {itcom[i]}  \t {it[i]}");
                 }
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
@@ -241,14 +253,14 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "1")
                 {
-                    if (PlayerMoney >= 1000 && it[0] != it[6])
+                    if (PlayerMoney >= 1000 && it[0] != it[7])
                     {
                         Console.Clear();
-                        it[0] = it[6];
+                        it[0] = it[7];
                         I_tem(1);
                         continue;
                     }
-                    else if (it[0] == it[6])
+                    else if (it[0] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -264,14 +276,14 @@ namespace ConsoleApp2
                 }
                 else if (input6 == "2")
                 {
-                    if (PlayerMoney >= 2000 && it[1] != it[6])
+                    if (PlayerMoney >= 2000 && it[1] != it[7])
                     {
                         Console.Clear();
-                        it[1] = it[6];
+                        it[1] = it[7];
                         I_tem(2);
                         continue;
                     }
-                    else if (it[1] == it[6])
+                    else if (it[1] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -285,16 +297,16 @@ namespace ConsoleApp2
                     }
 
                 }
-                else if (input6 == "3" && it[2] != it[6])
+                else if (input6 == "3")
                 {
-                    if (PlayerMoney >= 3500)
+                    if (PlayerMoney >= 3500 && it[2] != it[7])
                     {
                         Console.Clear();
-                        it[2] = it[6];
+                        it[2] = it[7];
                         I_tem(3);
                         continue;
                     }
-                    else if (it[2] == it[6])
+                    else if (it[2] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -308,16 +320,16 @@ namespace ConsoleApp2
                     }
 
                 }
-                else if (input6 == "4" && it[3] != it[6])
+                else if (input6 == "4")
                 {
-                    if (PlayerMoney >= 600)
+                    if (PlayerMoney >= 600 && it[4] != it[7])
                     {
                         Console.Clear();
-                        it[3] = it[6];
+                        it[4] = it[7];
                         I_tem(4);
                         continue;
                     }
-                    else if (it[3] == it[6])
+                    else if (it[4] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -331,16 +343,16 @@ namespace ConsoleApp2
                     }
 
                 }
-                else if (input6 == "5" && it[4] != it[6])
+                else if (input6 == "5")
                 {
-                    if (PlayerMoney >= 1500)
+                    if (PlayerMoney >= 1500 && it[5] != it[7])
                     {
                         Console.Clear();
-                        it[4] = it[6];
+                        it[5] = it[7];
                         I_tem(5);
                         continue;
                     }
-                    else if (it[4] == it[6])
+                    else if (it[5] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -354,16 +366,16 @@ namespace ConsoleApp2
                     }
 
                 }
-                else if (input6 == "6" && it[5] != it[6])
+                else if (input6 == "6")
                 {
-                    if (PlayerMoney >= 3000)
+                    if (PlayerMoney >= 3000 && it[6] != it[7])
                     {
                         Console.Clear();
-                        it[5] = it[6];
+                        it[6] = it[7];
                         I_tem(6);
                         continue;
                     }
-                    else if (it[5] == it[6])
+                    else if (it[6] == it[7])
                     {
                         Console.Clear();
                         Console.WriteLine("이미 구매한 물품입니다.");
@@ -393,36 +405,42 @@ namespace ConsoleApp2
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
             if (item == 2)
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
             if (item == 3)
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
             if (item == 4)
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
             if (item == 5)
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
             if (item == 6)
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
                 Console.WriteLine("구매 완료.");
+                Console.WriteLine();
             }
 
         }
