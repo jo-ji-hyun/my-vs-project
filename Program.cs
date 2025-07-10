@@ -139,6 +139,7 @@ namespace ConsoleApp2
                 Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
+                Console.WriteLine();
                 Console.WriteLine(bag);
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
@@ -172,25 +173,25 @@ namespace ConsoleApp2
             switch (buypoint)
             {
                 case 1:
-                    bag += $"{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
+                    bag += $"[E]{itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
                     break;
                 case 2:
-                    bag += $"{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
+                    bag += $"[E]{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
                     break;
                 case 3:
-                    bag += $"{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
+                    bag += $"[E]{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
                     break;
                 case 4:
-                    bag += $"{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
+                    bag += $"[E]{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
                     break;
                 case 5:
-                    bag += $"{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
+                    bag += $"[E]{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
                     break;
                 case 6:
-                    bag += $"{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
+                    bag += $"[E]{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
                     break;
                 default:
-
+                    
                     break;
             }
 
@@ -200,6 +201,7 @@ namespace ConsoleApp2
                 Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
+                Console.WriteLine("번호로 아이템 구매");
                 Console.WriteLine();
                 Console.WriteLine(bag);
                 Console.WriteLine();
@@ -210,6 +212,7 @@ namespace ConsoleApp2
                 if (input3 == "0")
                 {
                     Console.Clear();
+                    Program.buypoint = 0;
                     return;
                 }
                 else
@@ -275,7 +278,7 @@ namespace ConsoleApp2
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
-                Console.WriteLine("원하시는 아이템 구매");
+                Console.WriteLine("번호로 아이템 구매");
                 Console.WriteLine();
                 for (int i = 0; i < 7; i++)
                 {
