@@ -10,9 +10,36 @@ namespace ConsoleApp2
 
         public static int PlayerMoney = 150000;
 
+        public static List<string> it = new List<string>();
+
+        public static List<string> itname = new List<string>();
+
+        public static List<string> itcom = new List<string>();
 
         static void Main(string[] args)
         {
+            it.Add("1000 G");
+            it.Add("2000 G");
+            it.Add("3500 G");
+            it.Add("600 G");
+            it.Add("1500 G");
+            it.Add("3000 G");
+            it.Add("구매 완료");
+
+            itname.Add("수련자 갑옷 ");
+            itname.Add("무쇠 갑옷   ");
+            itname.Add("스파르타의 갑옷");
+            itname.Add("낡은 검     ");
+            itname.Add("청동 도끼   ");
+            itname.Add("스파르타의 창");
+
+            itcom.Add("수련에 도움을 주는 갑옷입니다.                    ");
+            itcom.Add("무쇠로 만들어져 튼튼한 갑옷입니다.                ");
+            itcom.Add("스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ");
+            itcom.Add("쉽게 볼 수 있는 낡은 검 입니다.                   ");
+            itcom.Add("어디선가 사용됐던거 같은 도끼입니다.              ");
+            itcom.Add("스파르타의 전사들이 사용했다는 전설의 창입니다.   ");
+
             Menu();
         }
         public static void Menu()
@@ -153,10 +180,10 @@ namespace ConsoleApp2
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
-                //for (int i = 0; i < 6; i++)
-                //{
-                //    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t 수련에 도움을 주는 갑옷입니다.                 \t {it[i]}");
-                //}
+                for (int i = 0; i < 6; i++)
+                {
+                    Console.WriteLine($"{i + 1} {itname[i]}   \t 방어력 +5 \t {itcom[i]}  \t {it[i]}");
+                }
                 Console.WriteLine();
                 Console.WriteLine("1. 아이템 구매");
                 Console.WriteLine("0. 나가기");
@@ -187,37 +214,7 @@ namespace ConsoleApp2
 
         public static void storebuy()
         {
-           Console.Clear();
-           List<string> it = new List<string>();
-            {
-                it.Add("1000 G");
-                it.Add("2000 G");
-                it.Add("3500 G");
-                it.Add("600 G");
-                it.Add("1500 G");
-                it.Add("3000 G");
-                it.Add("구매 완료");
-            }
-
-            List<string> itname = new List<string>();
-            {
-                itname.Add("수련자 갑옷 ");
-                itname.Add("무쇠 갑옷   ");
-                itname.Add("스파르타의 갑옷");
-                itname.Add("낡은 검     ");
-                itname.Add("청동 도끼   ");
-                itname.Add("스파르타의 창");
-            }
-
-            List<string> itcom = new List<string>();
-            {
-                itcom.Add("수련에 도움을 주는 갑옷입니다.                    ");
-                itcom.Add("무쇠로 만들어져 튼튼한 갑옷입니다.                ");
-                itcom.Add("스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ");
-                itcom.Add("쉽게 볼 수 있는 낡은 검 입니다.                   ");
-                itcom.Add("어디선가 사용됐던거 같은 도끼입니다.              ");
-                itcom.Add("스파르타의 전사들이 사용했다는 전설의 창입니다.   ");
-            }
+            Console.Clear();
 
             while (true)
             {
@@ -389,49 +386,46 @@ namespace ConsoleApp2
             }
         }
 
-       public static void I_tem(int item) 
+        public static void I_tem(int item)
         {
-            if(item == 1)
+            if (item == 1)
             {
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
                 Console.WriteLine("구매 완료.");
             }
-            if(item == 2)
+            if (item == 2)
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
                 Console.WriteLine("구매 완료.");
             }
-            if(item == 3)
+            if (item == 3)
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
                 Console.WriteLine("구매 완료.");
             }
-            if(item == 4)
+            if (item == 4)
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
                 Console.WriteLine("구매 완료.");
             }
-            if(item == 5)
+            if (item == 5)
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
                 Console.WriteLine("구매 완료.");
             }
-            if(item == 6)
+            if (item == 6)
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
                 Console.WriteLine("구매 완료.");
             }
-            
+
         }
 
-
-
-}
-
+    }
 }
