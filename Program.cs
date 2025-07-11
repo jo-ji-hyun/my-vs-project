@@ -15,13 +15,12 @@
 
         public static List<string> it = new List<string>();
 
-        public static bool IsEquipped = false;
-
-        public static string Result => IsEquipped ? "[E]" : "[ ]";
-
         public static List<string> inventory = new List<string>();
 
+        public static int[] inventorypoint = new int[8];
+
         public static int buypoint = 0;
+        
 
         static void Main(string[] args)
         {
@@ -59,6 +58,14 @@
             it.Add("1500 G");
             it.Add("3000 G");
             it.Add("구매 완료");
+
+            inventory.Add($"[E]{itname[0]}  \t {itnumber[0]}  \t {itcom[0]}  \t {it[0]}");
+            inventory.Add($"[E]{itname[1]}  \t {itnumber[1]}  \t {itcom[1]}  \t {it[1]}");
+            inventory.Add($"[E]{itname[2]}  \t {itnumber[2]}  \t {itcom[2]}  \t {it[2]}");
+            inventory.Add($"");
+            inventory.Add($"[E]{itname[4]}  \t {itnumber[4]}  \t {itcom[4]}  \t {it[4]}");
+            inventory.Add($"[E]{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}  \t {it[5]}");
+            inventory.Add($"[E]{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}  \t {it[6]}");
 
             Menu();
 
@@ -132,6 +139,21 @@
             }
         }
 
+        public static void Display()
+        { 
+            for (int i = 0; i < 7; i++) 
+            {
+                if (inventorypoint[i] == 1)
+                {
+                    Console.WriteLine(inventory[i]);
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
+            }
+        }
+
         public static void Inventory()
         {
             Console.Clear();
@@ -142,7 +164,7 @@
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine();
-                
+                Display();
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
                 Console.WriteLine("0. 나가기");
@@ -179,9 +201,9 @@
                 Console.WriteLine("보유 중인 아이템을 관리할 수 있습니다.");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
-                Console.WriteLine("번호로 아이템 구매");
+                Console.WriteLine("번호로 아이템 관리");
                 Console.WriteLine();
-                
+                Display();
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
@@ -195,7 +217,7 @@
                 if(input3 == "1")
                 {
                     Console.Clear();
-                    IsEquipped = true;
+                    
                 }
                 if(input3 == "2")
                 {
@@ -288,6 +310,7 @@
                     {
                         Console.Clear();
                         it[0] = it[7];
+                        inventorypoint[0] = 1;
                         I_tem(1);
                     }
                     else if (it[0] == it[7])
@@ -310,6 +333,7 @@
                     {
                         Console.Clear();
                         it[1] = it[7];
+                        inventorypoint[1] = 1;
                         I_tem(2);
                     }
                     else if (it[1] == it[7])
@@ -332,6 +356,7 @@
                     {
                         Console.Clear();
                         it[2] = it[7];
+                        inventorypoint[2] = 1;
                         I_tem(3);
                     }
                     else if (it[2] == it[7])
@@ -354,6 +379,7 @@
                     {
                         Console.Clear();
                         it[4] = it[7];
+                        inventorypoint[4] = 1;
                         I_tem(4);
                     }
                     else if (it[4] == it[7])
@@ -376,6 +402,7 @@
                     {
                         Console.Clear();
                         it[5] = it[7];
+                        inventorypoint[5] = 1;
                         I_tem(5);
                     }
                     else if (it[5] == it[7])
@@ -398,6 +425,7 @@
                     {
                         Console.Clear();
                         it[6] = it[7];
+                        inventorypoint[6] = 1;
                         I_tem(6);
                     }
                     else if (it[6] == it[7])
