@@ -15,6 +15,8 @@
 
         public static List<string> it = new List<string>();
 
+        public static List<string> IsEquipped = new List<string>();
+
         public static List<string> inventory = new List<string>();
 
         public static int[] inventorypoint = new int[8];
@@ -59,17 +61,26 @@
             it.Add("3000 G");
             it.Add("구매 완료");
 
-            inventory.Add($"[E]{itname[0]}  \t {itnumber[0]}  \t {itcom[0]}  \t {it[0]}");
-            inventory.Add($"[E]{itname[1]}  \t {itnumber[1]}  \t {itcom[1]}  \t {it[1]}");
-            inventory.Add($"[E]{itname[2]}  \t {itnumber[2]}  \t {itcom[2]}  \t {it[2]}");
+            IsEquipped.Add("[E]");
+            IsEquipped.Add("[E]");
+            IsEquipped.Add("[E]");
+            IsEquipped.Add("   ");
+            IsEquipped.Add("[E]");
+            IsEquipped.Add("[E]");
+            IsEquipped.Add("[E]");
+
+            inventory.Add($"{IsEquipped[0]}{itname[0]}  \t {itnumber[0]}  \t {itcom[0]}");
+            inventory.Add($"{IsEquipped[1]}{itname[1]}  \t {itnumber[1]}  \t {itcom[1]}");
+            inventory.Add($"{IsEquipped[2]}{itname[2]}  \t {itnumber[2]}  \t {itcom[2]}");
             inventory.Add($"");
-            inventory.Add($"[E]{itname[4]}  \t {itnumber[4]}  \t {itcom[4]}  \t {it[4]}");
-            inventory.Add($"[E]{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}  \t {it[5]}");
-            inventory.Add($"[E]{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}  \t {it[6]}");
+            inventory.Add($"{IsEquipped[4]}{itname[4]}  \t {itnumber[4]}  \t {itcom[4]}");
+            inventory.Add($"{IsEquipped[5]}{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}");
+            inventory.Add($"{IsEquipped[6]}{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}");
 
             Menu();
 
         }
+
         public static void Menu()
         {
             bool isgame = true;
@@ -99,6 +110,7 @@
                     default:
                         Console.Clear();
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine();
                         break;
                 }
 
@@ -164,6 +176,7 @@
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine();
+                Console.WriteLine();
                 Display();
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
@@ -214,15 +227,101 @@
                     Console.Clear();
                     return;
                 }
-                if(input3 == "1")
+                if(input3 == "1" && inventorypoint[0] == 1)
                 {
                     Console.Clear();
-                    
+                    if (IsEquipped[0] == "[E]")
+                    {
+                        IsEquipped[0] = IsEquipped[3];
+                        inventory[0] = $"{IsEquipped[0]}{itname[0]} \t {itnumber[0]} \t {itcom[0]}";
+                        PlayerSheield -= 5;
+                    }
+                    else
+                    {
+                        IsEquipped[0] = "[E]";
+                        inventory[0] = $"{IsEquipped[0]}{itname[0]} \t {itnumber[0]} \t {itcom[0]}";
+                        PlayerSheield += 5;
+                    }
                 }
-                if(input3 == "2")
+                if(input3 == "2" && inventorypoint[1] == 1)
                 {
                     Console.Clear();
-                    
+                    if (IsEquipped[1] == "[E]")
+                    {
+                        IsEquipped[1] = IsEquipped[3];
+                        inventory[1] = $"{IsEquipped[1]}{itname[1]} \t {itnumber[1]} \t {itcom[1]}";
+                        PlayerSheield -= 9;
+                    }
+                    else
+                    {
+                        IsEquipped[1] = "[E]";
+                        inventory[1] = $"{IsEquipped[1]}{itname[1]} \t {itnumber[1]} \t {itcom[1]}";
+                        PlayerSheield += 9;
+                    }
+                }
+                if(input3 == "3" && inventorypoint[2] == 1)
+                {
+                    Console.Clear();
+                    if (IsEquipped[2] == "[E]")
+                    {
+                        IsEquipped[2] = IsEquipped[3];
+                        inventory[2] = $"{IsEquipped[2]}{itname[2]} \t {itnumber[2]} \t {itcom[2]}";
+                        PlayerSheield -= 15;
+                    }
+                    else
+                    {
+                        IsEquipped[2] = "[E]";
+                        inventory[2] = $"{IsEquipped[2]}{itname[2]} \t {itnumber[2]} \t {itcom[2]}";
+                        PlayerSheield += 15;
+                    }
+                }
+                if(input3 == "4" && inventorypoint[4] == 1)
+                {
+                    Console.Clear();
+                    if (IsEquipped[4] == "[E]")
+                    {
+                        IsEquipped[4] = IsEquipped[3];
+                        inventory[4] = $"{IsEquipped[4]}{itname[4]} \t {itnumber[4]} \t {itcom[4]}";
+                        PlayerAttack -= 2;
+                    }
+                    else
+                    {
+                        IsEquipped[4] = "[E]";
+                        inventory[4] = $"{IsEquipped[4]}{itname[4]} \t {itnumber[4]} \t {itcom[4]}";
+                        PlayerAttack += 2;
+                    }
+                }
+                if(input3 == "5" && inventorypoint[5] == 1)
+                {
+                    Console.Clear();
+                    if (IsEquipped[5] == "[E]")
+                    {
+                        IsEquipped[5] = IsEquipped[3];
+                        inventory[5] = $"{IsEquipped[5]}{itname[5]} \t {itnumber[5]} \t {itcom[5]}";
+                        PlayerAttack -= 5;
+                    }
+                    else
+                    {
+                        IsEquipped[5] = "[E]";
+                        inventory[5] = $"{IsEquipped[5]}{itname[5]} \t {itnumber[5]} \t {itcom[5]}";
+                        PlayerAttack += 5;
+                    }
+                }
+                if(input3 == "6" && inventorypoint[6] == 1)
+                {
+                    Console.Clear();
+                    if (IsEquipped[6] == "[E]")
+                    {
+                        IsEquipped[6] = IsEquipped[3];
+                        inventory[6] = $"{IsEquipped[6]}{itname[6]} \t {itnumber[6]} \t {itcom[6]}";
+                        PlayerAttack -= 7;
+                    }
+                    else
+                    {
+                        IsEquipped[6] = "[E]";
+                        inventory[6] = $"{IsEquipped[6]}{itname[6]} \t {itnumber[6]} \t {itcom[6]}";
+                        PlayerAttack += 7;
+                    }
                 }
                 else
                 {
@@ -244,6 +343,7 @@
                 Console.WriteLine($"{PlayerMoney} G");
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
+                Console.WriteLine();
                 Console.WriteLine();
                 for (int i = 0; i < 7; i++)
                 {
@@ -457,7 +557,6 @@
             {
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -466,7 +565,6 @@
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -475,7 +573,6 @@
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -484,7 +581,6 @@
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -493,7 +589,6 @@
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -502,7 +597,6 @@
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
-                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
