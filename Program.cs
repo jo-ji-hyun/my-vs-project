@@ -76,7 +76,8 @@
             inventory.Add($"{IsEquipped[5]}{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}");
             inventory.Add($"{IsEquipped[6]}{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}");
 
-            Menu();
+            status.Test();
+           // Menu();
 
         }
 

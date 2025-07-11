@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "status.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeDocumentMoniker": "status.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeToolTip": "status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T05:03:41.695Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAACsBAAAAAAAAAAAswEcBAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwE4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T11:22:41.164Z",
               "EditorCaption": ""
