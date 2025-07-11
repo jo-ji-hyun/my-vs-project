@@ -15,9 +15,9 @@
 
         public static List<string> it = new List<string>();
 
-        public bool IsEquipped { get; set; } = false;
+        public static bool IsEquipped = false;
 
-        public static string Result => IsEquipped  ? "[E]" : "[ ]";
+        public static string Result => IsEquipped ? "[E]" : "[ ]";
 
         public static List<string> inventory = new List<string>();
 
@@ -142,7 +142,7 @@
                 Console.WriteLine();
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine();
-                DisplayAllInventoryItems();
+                
                 Console.WriteLine();
                 Console.WriteLine("1. 장착 관리");
                 Console.WriteLine("0. 나가기");
@@ -169,65 +169,10 @@
             }
         }
 
-        public static void DisplayAllInventoryItems()
-        {
-            if (inventory.Count == 0) 
-            {
-                Console.WriteLine("비어있습니다.");
-            }
-            else
-            {
-                for (int i = 0; i < inventory.Count; i++)
-                {
-                    Console.Write($"{inventory[i]}"); 
-                }
-            }
-        }
-
-        public static void BuyItem(int buypoint)
-        {
-            string bag = "";
-            
-
-            if (buypoint == 1)
-            {
-              bag += $"{Program.Result} {itname[0]}   \t {itnumber[0]}  \t {itcom[0]}  \t \n";
-            }
-            else if(buypoint == 2)
-            {
-              bag += $"{itname[1]}   \t {itnumber[1]}  \t {itcom[1]}  \t \n";
-            }
-            else if(buypoint == 3)
-            {
-              bag += $"{itname[2]}   \t {itnumber[2]}  \t {itcom[2]}  \t \n";
-            }
-            else if(buypoint == 4)
-            {
-              bag += $"{itname[4]}   \t {itnumber[4]}  \t {itcom[4]}  \t \n";
-            }
-            else if(buypoint == 5)
-            {
-              bag += $"{itname[5]}   \t {itnumber[5]}  \t {itcom[5]}  \t \n";
-            }
-            else if(buypoint == 6)
-            {
-              bag += $"{itname[6]}   \t {itnumber[6]}  \t {itcom[6]}  \t \n";
-            }
-            else
-            {
-                Console.WriteLine("비어있습니다.");
-            }
-            if (!string.IsNullOrEmpty(bag))
-            {
-                inventory.Add(bag);
-            }
-        }
 
 
         public static void Equipment()
         {
-
-
             while (true)
             {
                 Console.WriteLine("인벤토리 - 장비 창");
@@ -236,7 +181,7 @@
                 Console.WriteLine("[아이템 목록]");
                 Console.WriteLine("번호로 아이템 구매");
                 Console.WriteLine();
-                DisplayAllInventoryItems();
+                
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
@@ -250,7 +195,7 @@
                 if(input3 == "1")
                 {
                     Console.Clear();
-                   
+                    IsEquipped = true;
                 }
                 if(input3 == "2")
                 {
@@ -342,7 +287,6 @@
                     if (PlayerMoney >= 1000 && it[0] != it[7])
                     {
                         Console.Clear();
-                        IsEquipped = true;
                         it[0] = it[7];
                         I_tem(1);
                     }
@@ -485,7 +429,7 @@
             {
                 PlayerMoney -= 1000;
                 PlayerSheield += 5;
-                Program.BuyItem(1);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -494,7 +438,7 @@
             {
                 PlayerMoney -= 2000;
                 PlayerSheield += 9;
-                Program.BuyItem(2);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -503,7 +447,7 @@
             {
                 PlayerMoney -= 3500;
                 PlayerSheield += 15;
-                Program.BuyItem(3);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -512,7 +456,7 @@
             {
                 PlayerMoney -= 600;
                 PlayerAttack += 2;
-                Program.BuyItem(4);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -521,7 +465,7 @@
             {
                 PlayerMoney -= 1500;
                 PlayerAttack += 5;
-                Program.BuyItem(5);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
@@ -530,7 +474,7 @@
             {
                 PlayerMoney -= 3000;
                 PlayerAttack += 7;
-                Program.BuyItem(6);
+                
                 Console.WriteLine("구매 완료.");
                 Console.WriteLine();
                 Equipment();
