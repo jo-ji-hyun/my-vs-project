@@ -7,17 +7,17 @@
 
         public static int PlayerMoney = 150000; //실험을위해 돈복사
 
-        public static List<string> itname = new List<string>();
+        public static string[] itname = new string[7];
 
-        public static List<string> itnumber = new List<string>();
+        public static string[] itnumber = new string[7];
 
-        public static List<string> itcom = new List<string>();
+        public static string[] itcom = new string[7];
 
-        public static List<string> it = new List<string>();
+        public static string[] it = new string[8];
 
-        public static List<string> IsEquipped = new List<string>();
+        public static string[] IsEquipped = new string[7];
 
-        public static List<string> inventory = new List<string>();
+        public static string[] inventory = new string[7];
 
         public static int[] inventorypoint = new int[8];
 
@@ -26,55 +26,55 @@
         static void Main(string[] args)
         {
 
-            itname.Add("1. 수련자 갑옷    ");
-            itname.Add("2. 무쇠 갑옷      ");
-            itname.Add("3. 스파르타의 갑옷");
-            itname.Add("            ");
-            itname.Add("4. 낡은 검        ");
-            itname.Add("5. 청동 도끼      ");
-            itname.Add("6. 스파르타의 창  ");
+            itname[0] = "1. 수련자 갑옷    ";
+            itname[1] = "2. 무쇠 갑옷      ";
+            itname[2] = "3. 스파르타의 갑옷";
+            itname[3] = "                  ";
+            itname[4] = "4. 낡은 검        ";
+            itname[5] = "5. 청동 도끼      ";
+            itname[6] = "6. 스파르타의 창  ";
 
-            itnumber.Add("방어력 + 5  ");
-            itnumber.Add("방어력 + 9  ");
-            itnumber.Add("방어력 + 15 ");
-            itnumber.Add("            ");
-            itnumber.Add("공격력 + 2  ");
-            itnumber.Add("공격력 + 5  ");
-            itnumber.Add("공격력 + 7  ");
+            itnumber[0] = "방어력 + 5  ";
+            itnumber[1] = "방어력 + 9  ";
+            itnumber[2] = "방어력 + 15 ";
+            itnumber[3] = "            ";
+            itnumber[4] = "공격력 + 2  ";
+            itnumber[5] = "공격력 + 5  ";
+            itnumber[6] = "공격력 + 7  ";
             
 
-            itcom.Add("수련에 도움을 주는 갑옷입니다.                    ");
-            itcom.Add("무쇠로 만들어져 튼튼한 갑옷입니다.                ");
-            itcom.Add("스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ");
-            itcom.Add("                                                  ");
-            itcom.Add("쉽게 볼 수 있는 낡은 검 입니다.                   ");
-            itcom.Add("어디선가 사용됐던거 같은 도끼입니다.              ");
-            itcom.Add("스파르타의 전사들이 사용했다는 전설의 창입니다.   ");
+            itcom[0] = "수련에 도움을 주는 갑옷입니다.                    ";
+            itcom[1] = "무쇠로 만들어져 튼튼한 갑옷입니다.                ";
+            itcom[2] = "스파르타의 전사들이 사용했다는 전설의 갑옷입니다. ";
+            itcom[3] = "                                                  ";
+            itcom[4] = "쉽게 볼 수 있는 낡은 검 입니다.                   ";
+            itcom[5] = "어디선가 사용됐던거 같은 도끼입니다.              ";
+            itcom[6] = "스파르타의 전사들이 사용했다는 전설의 창입니다.   ";
 
-            it.Add("1000 G");
-            it.Add("2000 G");
-            it.Add("3500 G");
-            it.Add("      ");
-            it.Add("600 G ");
-            it.Add("1500 G");
-            it.Add("3000 G");
-            it.Add("구매 완료");
+            it[0] = "1000 G";
+            it[1] = "2000 G";
+            it[2] = "3500 G";
+            it[3] = "      ";
+            it[4] = "600 G ";
+            it[5] = "1500 G";
+            it[6] = "3000 G";
+            it[7] = "구매 완료";
 
-            IsEquipped.Add("[E]");
-            IsEquipped.Add("[E]");
-            IsEquipped.Add("[E]");
-            IsEquipped.Add("   ");
-            IsEquipped.Add("[E]");
-            IsEquipped.Add("[E]");
-            IsEquipped.Add("[E]");
+            IsEquipped[0] = "[E]";
+            IsEquipped[1] = "[E]";
+            IsEquipped[2] = "[E]";
+            IsEquipped[3] = "   ";
+            IsEquipped[4] = "[E]";
+            IsEquipped[5] = "[E]";
+            IsEquipped[6] = "[E]";
 
-            inventory.Add($"{IsEquipped[0]}{itname[0]}  \t {itnumber[0]}  \t {itcom[0]}");
-            inventory.Add($"{IsEquipped[1]}{itname[1]}  \t {itnumber[1]}  \t {itcom[1]}");
-            inventory.Add($"{IsEquipped[2]}{itname[2]}  \t {itnumber[2]}  \t {itcom[2]}");
-            inventory.Add($"");
-            inventory.Add($"{IsEquipped[4]}{itname[4]}  \t {itnumber[4]}  \t {itcom[4]}");
-            inventory.Add($"{IsEquipped[5]}{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}");
-            inventory.Add($"{IsEquipped[6]}{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}");
+            inventory[0] = $"{IsEquipped[0]}{itname[0]}  \t {itnumber[0]}  \t {itcom[0]}";
+            inventory[1] = $"{IsEquipped[1]}{itname[1]}  \t {itnumber[1]}  \t {itcom[1]}";
+            inventory[2] = $"{IsEquipped[2]}{itname[2]}  \t {itnumber[2]}  \t {itcom[2]}";
+            inventory[3] = $"";
+            inventory[4] = $"{IsEquipped[4]}{itname[4]}  \t {itnumber[4]}  \t {itcom[4]}";
+            inventory[5] = $"{IsEquipped[5]}{itname[5]}  \t {itnumber[5]}  \t {itcom[5]}";
+            inventory[6] = $"{IsEquipped[6]}{itname[6]}  \t {itnumber[6]}  \t {itcom[6]}";
  
             Menu();
 
