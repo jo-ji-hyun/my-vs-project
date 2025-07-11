@@ -38,8 +38,7 @@
               "RelativeToolTip": "ItemShop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:17:41.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:17:41.98Z"
             },
             {
               "$type": "Document",
@@ -51,21 +50,19 @@
               "RelativeToolTip": "Bag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:10:41.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:10:41.985Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Status.cs",
-              "RelativeDocumentMoniker": "Status.cs",
-              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Status.cs",
-              "RelativeToolTip": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeDocumentMoniker": "status.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeToolTip": "status.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:11:22.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:11:22.996Z"
             },
             {
               "$type": "Document",
@@ -75,7 +72,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAuwIcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T11:22:41.164Z",
               "EditorCaption": ""

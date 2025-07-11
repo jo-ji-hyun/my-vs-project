@@ -115,6 +115,23 @@
 
             }
         }
+       
 
     }
+    internal class Item
+    {
+        public string Name { get; }
+        public string StatusBonus { get; }
+        public string Comment{ get; }
+        public string Price { get; }
+
+        public Item(string name, string statusbonus, string comment, string price)
+        {
+            Name = name;
+            StatusBonus = statusbonus;
+            Comment = comment;
+            Price = price; 
+        }
+    }
+    //미완성
 }

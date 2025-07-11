@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\itemshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:itemshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:bag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\itemshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:itemshop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|c:\\users\\lenovo\\source\\repos\\consoleapp2\\consoleapp2\\my-vs-project\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBD115B0-51B8-63E0-30E8-1430F1FEF7A7}|ConsoleApp2.csproj|solutionrelative:status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,16 +30,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ItemShop.cs",
               "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\ItemShop.cs",
               "RelativeDocumentMoniker": "ItemShop.cs",
               "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\ItemShop.cs",
               "RelativeToolTip": "ItemShop.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAYwAsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:17:41.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:17:41.98Z"
             },
             {
               "$type": "Document",
@@ -49,23 +48,21 @@
               "RelativeDocumentMoniker": "Bag.cs",
               "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Bag.cs",
               "RelativeToolTip": "Bag.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAgwA8AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:10:41.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:10:41.985Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Status.cs",
-              "RelativeDocumentMoniker": "Status.cs",
-              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Status.cs",
-              "RelativeToolTip": "Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeDocumentMoniker": "status.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\status.cs",
+              "RelativeToolTip": "status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T05:11:22.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-11T05:11:22.996Z"
             },
             {
               "$type": "Document",
@@ -75,7 +72,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\lenovo\\source\\repos\\ConsoleApp2\\ConsoleApp2\\my-vs-project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-09T11:22:41.164Z",
               "EditorCaption": ""
