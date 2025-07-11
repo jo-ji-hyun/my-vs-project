@@ -5,7 +5,7 @@
         public static int PlayerAttack = 0;
         public static int PlayerSheield = 0;
 
-        public static int PlayerMoney = 150000;
+        public static int PlayerMoney = 150000; //실험을위해 돈복사
 
         public static List<string> itname = new List<string>();
 
@@ -22,7 +22,6 @@
         public static int[] inventorypoint = new int[8];
 
         public static int buypoint = 0;
-        
 
         static void Main(string[] args)
         {
@@ -204,8 +203,6 @@
             }
         }
 
-
-
         public static void Equipment()
         {
             while (true)
@@ -217,6 +214,7 @@
                 Console.WriteLine("번호로 아이템 관리");
                 Console.WriteLine();
                 Display();
+                Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
@@ -242,6 +240,7 @@
                         inventory[0] = $"{IsEquipped[0]}{itname[0]} \t {itnumber[0]} \t {itcom[0]}";
                         PlayerSheield += 5;
                     }
+                    continue;
                 }
                 if(input3 == "2" && inventorypoint[1] == 1)
                 {
@@ -258,6 +257,7 @@
                         inventory[1] = $"{IsEquipped[1]}{itname[1]} \t {itnumber[1]} \t {itcom[1]}";
                         PlayerSheield += 9;
                     }
+                    continue;
                 }
                 if(input3 == "3" && inventorypoint[2] == 1)
                 {
@@ -274,6 +274,7 @@
                         inventory[2] = $"{IsEquipped[2]}{itname[2]} \t {itnumber[2]} \t {itcom[2]}";
                         PlayerSheield += 15;
                     }
+                    continue;
                 }
                 if(input3 == "4" && inventorypoint[4] == 1)
                 {
@@ -290,6 +291,7 @@
                         inventory[4] = $"{IsEquipped[4]}{itname[4]} \t {itnumber[4]} \t {itcom[4]}";
                         PlayerAttack += 2;
                     }
+                    continue;
                 }
                 if(input3 == "5" && inventorypoint[5] == 1)
                 {
@@ -306,6 +308,7 @@
                         inventory[5] = $"{IsEquipped[5]}{itname[5]} \t {itnumber[5]} \t {itcom[5]}";
                         PlayerAttack += 5;
                     }
+                    continue;
                 }
                 if(input3 == "6" && inventorypoint[6] == 1)
                 {
@@ -322,6 +325,7 @@
                         inventory[6] = $"{IsEquipped[6]}{itname[6]} \t {itnumber[6]} \t {itcom[6]}";
                         PlayerAttack += 7;
                     }
+                    continue;
                 }
                 else
                 {
@@ -375,8 +379,6 @@
             }
         }
 
-
-
         public static void storebuy()
         {
             Console.Clear();
@@ -394,6 +396,7 @@
                 {
                     Console.WriteLine($"{itname[i]}   \t {itnumber[i]}  \t {itcom[i]}  \t {it[i]}");
                 }
+                Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("0. 나가기");
                 Console.WriteLine();
